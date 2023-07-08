@@ -1,0 +1,353 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.body{
+   
+  background-color: #5f5f5f83;
+   
+}
+.wrapper{
+    height: 100vh;
+    background: linear-gradient(114.9deg, rgb(34, 34, 34) 8.3%, rgb(0, 40, 60) 41.6%, rgb(0, 143, 213) 93.4%);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color: white;
+    /* overflow-y: hidden; */
+}
+
+  
+.heading{
+    font-variant: small-caps;
+    text-align: center;
+    padding: 20px;
+    /* text-shadow: 2px 2px 2px rgb(66, 53, 239), 0px 0px 5px gray; */
+}
+.tab-container{
+    padding: 20px;
+    margin-left: 25%;
+   
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    gap: 40%;
+}
+.tab{
+    width: 10rem;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.location-access {
+   /* scale: 0; */
+    display: none;
+    max-width: 50%;
+    padding: 30px;
+    align-items: center;
+   text-align: center;
+    flex-direction: column;
+    margin-left: 25%;
+
+
+}
+.location-access.active{
+    display: flex;
+}
+.location-access p:first-of-type{
+    font-size:larger;
+    font-weight: bolder;
+    padding: 10px;
+}
+.location-access p:last-of-type{
+    letter-spacing:1px;
+}
+.access-btn{
+    margin: 20px;
+    width: 8rem;
+    padding: 5px;
+    font-size: 1rem;
+    background-color: rgb(38, 178, 38);
+    border-radius: 7px;
+
+}
+.access-btn:hover{
+    background-color: white;
+    border: 1px solid  rgb(38, 178, 38);
+    box-shadow: 0px 0px 10px rgb(38, 178, 38);
+
+    
+}
+.tab.current-tab{
+    background: rgba(116, 115, 115, 0.258);
+}
+.search-form.active{
+    display: flex;
+}
+
+.search-form{
+    display: none;
+   /* display: flex; */
+   top: 20;
+   padding: 5px;
+    width:90%;
+    max-width:550px;
+    margin:0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px; 
+    margin-bottom: 3rem;
+    background:rgba(116, 115, 115, 0.258);
+    border-radius: 20px;
+}
+[data-searchInput]
+{   all:unset;
+    width: calc(100% - 60px);
+    padding: 10px;
+    
+    /* background:rgba(116, 115, 115, 0.258); */
+    
+    
+}
+
+[data-searchInput]::placeholder{
+    font-size: larger;
+    color: grey;
+}
+[search-btn]{
+    all: unset;
+    float: right;
+    padding:unset;
+    width: 40px;
+    height: 40px;
+   /* background:rgba(116, 115, 115, 0.258) ; */
+    align-items: center;
+    justify-content: center;
+   
+    margin-bottom:1px;
+}
+.loading-container{
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    justify-items: center;
+    margin-top: 10%;
+    flex-direction: column;
+    margin-left: 45%;
+}
+.loading-container p{
+    margin-left: 6%;
+}
+.loading-container.active{
+    display: flex;
+}
+.userInfo-container{
+    display: none;
+    flex-direction: column;
+   
+    justify-content: center;
+    justify-items: center;
+    max-width: 50%;
+    margin-left: 25%;
+}
+.userInfo-container.active{
+    display: flex;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+[user-city]{
+    font-size:1.5rem;
+            font-weight: bolder;
+            margin-top: 5px;
+}
+[ country-icon]
+{
+    all: unset;
+    float: right;
+    padding:unset;
+  height: 25px;
+   /* background:rgba(116, 115, 115, 0.258) ; */
+    align-items: center;
+    justify-content: center;
+   padding: 8px;
+    margin-bottom:1px;
+}
+[weatherdesc]{
+    align-self: center;
+    font-size: larger;
+
+}
+[weather-icon]{
+    height: 100px;
+    width: 100px;
+    align-self: center;
+}
+.temp{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+[user-temp]{
+    align-self: center;
+    font-size: 2.5rem;
+    
+
+}
+.degree{
+    font-size: 2rem;
+    padding-left: 4px;
+}
+[weather-cards]{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    padding: 30px;
+    margin-bottom: 40%;
+}
+.card{
+    border-radius: 8px;
+   display: flex;
+   width: 20%;
+   flex-direction: column;
+   align-items: center;
+   align-content: center;
+    background: rgba(116, 115, 115, 0.258);
+}
+.card img{
+    height: 100px;
+    
+}
+.card p{
+    padding: 2px;
+    font-size: large;
+    font-weight: bold;
+
+}
+.error-container{
+  
+    position: absolute;
+   width: 30%;
+   background-color: white;
+   margin-left: 35%;
+   color: black;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 20px;
+  box-shadow: 0px 0px 10px white;
+  transition: 0.5s ease-in-out;
+  
+}
+.error-container.active{
+    display: flex;
+
+}
+.error-container img{
+    align-self: center;
+}
+.error-container button{
+    all: unset;
+    text-align: center;
+    width: 10rem;
+    align-self: center;
+    padding: 10px;
+    background-color:blue ;
+    font-size: large;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+   
+  
+}
+.error-container button:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 10px blue;
+}
+.error-container p{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 10px;
+    margin-left: 5%;
+}
+.errorImg{
+   
+    width: 20rem;
+}
+.overlay {
+    position:absolute;
+    background-color: #5f5f5f83;
+    top: 0;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    transition: 0.5s ease-in-out;
+  }
+.overlay.active{
+    opacity: 1;
+}
+
+@media (max-width:1075px) {
+    .errorImg{
+        width: 15rem;
+    }
+    [weather-cards]{
+        width: 100%;
+        
+    }
+    .card{
+        width: 30%;
+    }
+    
+}
+@media (max-width:800px) {
+    .error-container{
+        width: 50%;
+        margin-left: 25%;
+    }
+    [weather-cards]{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    
+    }
+    .card{
+        align-self: center;
+        width: 50%;
+       margin: .75rem;
+    }
+    
+}
+@media (max-width:500px) {
+    .wrapper{
+        height: 100vh;
+    }
+    
+    
+    .tab{
+        font-size:0.85rem ;
+    }
+    .errorImg{
+        width: 5rem;
+    }
+    .card{
+        align-self: center;
+        width: 80%;
+       margin: .75rem;
+    }
+    
+}
